@@ -2,6 +2,7 @@
 echo "K3S Installer"
 echo "  1)Install Master"
 echo "  2)Install Worker"
+echo "  3)Stop k3s"
 read n
 case $n in
   1) echo "Installing Master..."
@@ -16,5 +17,6 @@ read PORT
 echo "Enter Worker name"
 read NAME
 curl -sfL https://get.k3s.io | K3S_URL=https://${SERVER}:${PORT} K3S_TOKEN=${TOKEN} K3S_NODE_NAME=${NAME}  sh -;;
+3)bash /usr/local/bin/k3s-killall.sh ;;
   *) echo "invalid option";;
 esac
