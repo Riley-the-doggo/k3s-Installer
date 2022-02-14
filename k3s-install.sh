@@ -122,7 +122,7 @@ respose3=$?
 name=$(<$OUTPUT3)
 case $respose3 in
   0) 
- curl -sfL https://get.k3s.io | K3S_URL=https://${cat $OUTPUT1}:${cat $OUTPUT2} K3S_TOKEN=${cat $OUTPUT} K3S_NODE_NAME=${NAME}  sh -;;
+ curl -sfL https://get.k3s.io | K3S_URL=https://${cat $OUTPUT1}:${cat $OUTPUT2} K3S_TOKEN=${cat $OUTPUT} K3S_NODE_NAME=${cat $OUTPUT3}  sh -;;
 1)
 clear
 ;;
