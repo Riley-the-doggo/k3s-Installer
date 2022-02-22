@@ -7,15 +7,11 @@ Installer for k3s
 
 **With Gui**
 ```shell
-git clone https://github.com/Riley-the-doggo/k3s-Installer.git
-cd k3s-Installer
 sudo apt-get install dialog curl
-bash ./k3s-install.sh
+curl https://raw.githubusercontent.com/Riley-the-doggo/k3s-Installer/main/k3s-install.sh | sh -
 ```
 **Without Gui**
 ```shell
-git clone https://github.com/Riley-the-doggo/k3s-Installer.git
-cd k3s-Installer
 sudo apt-get install curl
-bash ./k3s-installer-nogui.sh
+curl https://raw.githubusercontent.com/Riley-the-doggo/k3s-Installer/main/k3s-install-nogui.sh | sh -
 ```
